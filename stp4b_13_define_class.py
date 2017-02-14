@@ -1,3 +1,4 @@
+# define class
 class Night:
     level = 1
     life = 10
@@ -15,9 +16,11 @@ class Night:
         else:
             print('나 ' + self.name + ', 생명이 ' + str(self.life) + ' 남았다. 죽음이 나에게로 걸어온다.')
 
+# create instances
 night1 = Night('김신')
 night2 = Night('무신')
 
+# instance run methods
 night1.attack()
 night2.attack()
 night2.attack()
