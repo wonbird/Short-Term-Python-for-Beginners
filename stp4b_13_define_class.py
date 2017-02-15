@@ -18,7 +18,7 @@ class Hero:
         pass
 
 
-class Night(Hero):
+class Knight(Hero):
     def __init__(self, name, sex, country):
         Hero.__init__(self, name, sex)
         self.country = country
@@ -33,11 +33,11 @@ class Wizard(Hero):
         self.totem = totem
 
     def attack(self):
-        print('마법 공격!')
+        print('마법의 주문으로 공격!')
 
 
 # create instances
-tom = Night('Tom', 'M', 'Wonderland')
+tom = Knight('Tom', 'M', 'Wonderland')
 jane = Wizard('Jane', 'F', 'Wolf')
 
 # instance run methods
