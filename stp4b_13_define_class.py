@@ -1,28 +1,52 @@
 # define class
-class Night:
+class Hero:
     level = 1
-    life = 10
 
-    def __init__(self, name):
+    def __init__(self, name, sex):
         self.name = name
+        self.sex = sex
+
+    def level_up(self):
+        self.level += 1
+        print('<' + self.name + '의 레벨이 ' + str(self.level) + '으로 업그레이드 되었음>')
+
+    def say_hello(self):
+        print('내 이름은 ' + self.name + '. 나는 ' + self.__class__.__name__ + '이다.')
+        print('현재 레벨은 ' + str(self.level) + '이다.')
 
     def attack(self):
-        print('Yap!')
-        self.life -= 1
+        pass
 
-    def check_life(self):
-        if self.life <= 0:
-            print('나 ' + self.name + ', 너와 함께 한 시간 모두 눈부셨다. 이 불멸의 저주를 끝내고 무로 돌아간다.')
-        else:
-            print('나 ' + self.name + ', 생명이 ' + str(self.life) + ' 남았다. 죽음이 나에게로 걸어온다.')
+
+class Night(Hero):
+    def __init__(self, name, sex, country):
+        Hero.__init__(self, name, sex)
+        self.country = country
+
+    def attack(self):
+        print('내 칼을 받아라!')
+
+
+class Wizard(Hero):
+    def __init__(self, name, sex, totem):
+        Hero.__init__(self, name, sex)
+        self.totem = totem
+
+    def attack(self):
+        print('마법 공격!')
+
 
 # create instances
-night1 = Night('김신')
-night2 = Night('무신')
+tom = Night('Tom', 'M', 'Wonderland')
+jane = Wizard('Jane', 'F', 'Wolf')
 
 # instance run methods
-night1.attack()
-night2.attack()
-night2.attack()
-night1.check_life()
-night2.check_life()
+tom.say_hello()
+tom.attack()
+tom.level_up()
+tom.attack()
+tom.level_up()
+tom.attack()
+tom.level_up()
+jane.say_hello()
+tom.say_hello()
