@@ -2,9 +2,9 @@
 class Hero:
     level = 1
 
-    def __init__(self, name, sex):
+    def __init__(self, name, gender):
         self.name = name
-        self.sex = sex
+        self.gender = gender
 
     def level_up(self):
         self.level += 1
@@ -19,8 +19,8 @@ class Hero:
 
 
 class Knight(Hero):
-    def __init__(self, name, sex, country):
-        Hero.__init__(self, name, sex)
+    def __init__(self, name, gender, country):
+        Hero.__init__(self, name, gender)
         self.country = country
 
     def attack(self):
@@ -28,8 +28,8 @@ class Knight(Hero):
 
 
 class Wizard(Hero):
-    def __init__(self, name, sex, totem):
-        Hero.__init__(self, name, sex)
+    def __init__(self, name, gender, totem):
+        Hero.__init__(self, name, gender)
         self.totem = totem
 
     def attack(self):
@@ -40,8 +40,8 @@ class Wizard(Hero):
 
 
 # create instances
-knight_tom = Knight('Tom', 'M', 'Wonderland')
-wizard_jane = Wizard('Jane', 'F', 'Wolf')
+knight_tom = Knight('Tom', 'Male', 'Wonderland')
+wizard_jane = Wizard('Jane', 'Female', 'Wolf')
 
 # instance run methods
 knight_tom.say_hello()
