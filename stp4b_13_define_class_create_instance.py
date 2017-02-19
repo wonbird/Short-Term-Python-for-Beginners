@@ -35,18 +35,22 @@ class Wizard(Hero):
     def attack(self):
         print('마법의 주문으로 공격!')
 
+    def healing(self):
+        print('내 생명력이 회복되었다!')
+
 
 # create instances
-tom = Knight('Tom', 'M', 'Wonderland')
-jane = Wizard('Jane', 'F', 'Wolf')
+knight_tom = Knight('Tom', 'M', 'Wonderland')
+wizard_jane = Wizard('Jane', 'F', 'Wolf')
 
 # instance run methods
-tom.say_hello()
-tom.attack()
-tom.level_up()
-tom.attack()
-tom.level_up()
-tom.attack()
-tom.level_up()
-jane.say_hello()
-tom.say_hello()
+knight_tom.say_hello()
+knight_tom.attack()
+knight_tom.level_up()
+knight_tom.attack()
+knight_tom.level_up()
+knight_tom.attack()
+knight_tom.level_up()
+knight_tom.say_hello()
+wizard_jane.say_hello()
+wizard_jane.healing()
