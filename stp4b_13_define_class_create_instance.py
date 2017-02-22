@@ -39,9 +39,14 @@ class Wizard(Hero):
         print('내 생명력이 회복되었다!')
 
 
+class Dark(Hero):
+    pass
+
+
 # create instances
 knight_tom = Knight('Tom', 'Male', 'Wonderland')
 wizard_jane = Wizard('Jane', 'Female', 'Wolf')
+dark_king = Dark('King', 'Male')
 
 # instance run methods
 knight_tom.say_hello()
@@ -54,3 +59,4 @@ knight_tom.level_up()
 knight_tom.say_hello()
 wizard_jane.say_hello()
 wizard_jane.healing()
+dark_king.say_hello()
