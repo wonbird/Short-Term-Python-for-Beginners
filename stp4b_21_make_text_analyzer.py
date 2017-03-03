@@ -1,6 +1,3 @@
-# text_analyzer.py
-
-
 # 전체 텍스트에서 특정 문자의 갯수를 카운트하는 함수
 def count_char(text, char):
     count = 0
